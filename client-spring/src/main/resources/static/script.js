@@ -1,0 +1,30 @@
+function logerror(jqXHR,textStatus,errorThrown){
+	console.log("textStatus="+textStatus);
+	console.log("errorThrown="+errorThrown);
+}
+
+function submit() {
+	server = $("#server")[0].value;
+	content = $("#input")[0].value;
+	
+	date = new Date();
+	
+	timestamp = dateFormat(date,"dd-mmm-yyyy-HH-MM-ss-l")
+	
+	
+	
+	data ={message:content,timestamp:timestamp};
+	
+	$.ajax({
+		type:"POST",
+		crossDomain:true,
+		url:server+"/post",
+		data:data,
+		dataType:"json",
+		success:null,
+		error:logerror
+	});
+	
+}
+
+worker = new Worker("fetchWorker.js");

@@ -1,0 +1,6 @@
+package com.example.REST.service;
+
+@org.springframework.web.bind.annotation.RestController
+public class RestController {
+
+}

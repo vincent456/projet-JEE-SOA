@@ -7,7 +7,7 @@ function logerror(jqXHR,textStatus,errorThrown){
 }
 
 function display(data,textStatus,jqXHR){
-	
+	console.log(data);
 }
 
 function fetch() {

@@ -35,12 +35,18 @@ public class RestController {
 		}
 	}
 	
-	
+	@CrossOrigin(origins="http://localhost:8080")
 	@RequestMapping(method=RequestMethod.GET,value="/get")
-	List<Message> getMessage(@RequestParam(name="timestamp",required=false)String timestamp){
-		//Date d = 
-		//return MessagesRepository.findByTimestamp(timestamp);		
-		return null;
+	List<Message> getMessage(@RequestParam(name="timestamp",required=true)String timestamp) throws Exception{
+		DateFormat df = new SimpleDateFormat("dd-MMM-yyyy-HH-mm-ss-SSS");
+		Date d;
+		try {
+			d = df.parse(timestamp);
+			return MessagesRepository.findByTimestamp(d);	
+		}
+		catch (ParseException e){
+					throw new Exception("ParseException");
+				}
 	}
 	
 }

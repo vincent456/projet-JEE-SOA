@@ -9,6 +9,6 @@ import org.springframework.data.repository.CrudRepository;
 import DBItems.Message;
 
 public interface MessagesRepository extends CrudRepository<Message, Integer> {
-	@Query("select m from Message as m where m.timestamp > ?1")
+	@Query("select m from Message as m where m.timestamp < ?1")
 	List<Message> findByTimestamp(Date timestamp);
 }

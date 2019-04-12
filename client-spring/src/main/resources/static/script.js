@@ -11,8 +11,6 @@ function submit() {
 	
 	timestamp = dateFormat(date,"dd-mmm-yyyy-HH-MM-ss-l")
 	
-	
-	
 	data ={message:content,timestamp:timestamp};
 	
 	$.ajax({
@@ -27,4 +25,22 @@ function submit() {
 	
 }
 
-worker = new Worker("fetchWorker.js");
+//worker = new Worker("fetchWorker.js");
+
+function display(data,textStatus,jqXHR){
+	console.log(data);
+}
+
+function fetch() {
+	
+	date = new Date();
+	data = dateFormat(date,"dd-mmm-yyyy-HH-MM-ss-l");
+	$.ajax({
+		type:"GET",
+		crossDomain:true,
+		url:server+"/get?timestamp="+data,
+		dataType:"text",
+		success:display,
+		error:logerror
+	});
+}

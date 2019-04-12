@@ -1,0 +1,6 @@
+INDEX VERSION 1.4+/home/vincent456/Desktop/projet web soa/projet-JEE-SOA/eclipse-workspace/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+2332882957.index
+2491694714.index
+903212910.index
+1097782036.index
+1033948199.index

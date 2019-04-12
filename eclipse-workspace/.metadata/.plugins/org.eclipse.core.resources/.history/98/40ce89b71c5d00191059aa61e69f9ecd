@@ -1,0 +1,15 @@
+function fetch() {
+	$.ajax({
+		type:"GET",
+		crossDomain:true,
+		url:server+"/get",
+		data:data,
+		dataType:"json",
+		success:display,
+		error:logerror
+	});
+}
+
+while (true) {
+	fetch();
+}

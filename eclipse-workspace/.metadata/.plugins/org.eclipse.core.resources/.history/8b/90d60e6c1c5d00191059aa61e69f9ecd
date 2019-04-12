@@ -1,0 +1,7 @@
+function fetch() {
+	$.ajax({});
+}
+
+while (true) {
+	fetch();
+}

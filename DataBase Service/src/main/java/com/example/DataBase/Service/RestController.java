@@ -1,5 +1,8 @@
 package com.example.DataBase.Service;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
@@ -16,17 +19,28 @@ public class RestController {
 
 	@Autowired MessagesRepository MessagesRepository;
 	
+	@CrossOrigin(origins="http://localhost:8080")
 	@RequestMapping(method=RequestMethod.POST,value="/post")
-	void postMessage(@RequestParam(name="message",required=true) String message) {
+	void postMessage(@RequestParam(name="message",required=true) String message,@RequestParam(name="timestamp",required=true) String timestamp) throws Exception {
 		Message messageItem = new Message();
 		messageItem.setMessage(message);
-		MessagesRepository.save(messageItem);
+		DateFormat format = new SimpleDateFormat("dd-MMM-yyyy-HH-mm-ss-SSS");
+		Date date;
+		try {
+			date = format.parse(timestamp);
+			messageItem.setTimestamp(date);
+			MessagesRepository.save(messageItem);
+		} catch (ParseException e) {
+			throw new Exception("ParseException");
+		}
 	}
 	
 	
 	@RequestMapping(method=RequestMethod.GET,value="/get")
-	List<Message> getMessage(@RequestParam(name="timestamp",required=false)Date timestamp){
-		return MessagesRepository.findByTimestamp(timestamp);		
+	List<Message> getMessage(@RequestParam(name="timestamp",required=false)String timestamp){
+		//Date d = 
+		//return MessagesRepository.findByTimestamp(timestamp);		
+		return null;
 	}
 	
 }

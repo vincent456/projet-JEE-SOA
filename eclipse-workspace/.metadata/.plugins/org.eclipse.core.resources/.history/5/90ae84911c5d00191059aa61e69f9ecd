@@ -1,0 +1,11 @@
+function fetch() {
+	$.ajax({
+		type:"GET",
+		crossDomain:true,
+		url:server+"/get",
+	});
+}
+
+while (true) {
+	fetch();
+}

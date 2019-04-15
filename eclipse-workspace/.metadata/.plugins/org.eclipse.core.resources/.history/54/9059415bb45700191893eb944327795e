@@ -1,6 +1,0 @@
-package com.example.REST.service;
-
-@RestController
-public class RestController {
-
-}

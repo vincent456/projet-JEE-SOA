@@ -1,3 +1,5 @@
+var lto;
+
 function logerror(jqXHR,textStatus,errorThrown){
 	console.log("textStatus="+textStatus);
 	console.log("errorThrown="+errorThrown);
@@ -6,7 +8,7 @@ function logerror(jqXHR,textStatus,errorThrown){
 function submit() {
 	server = $("#server")[0].value;
 	content = $("#input")[0].value;
-	
+	$("#input")[0].value="";
 	date = new Date();
 	
 	timestamp = dateFormat(date,"dd-mmm-yyyy-HH-MM-ss-l")
@@ -28,13 +30,40 @@ function submit() {
 //worker = new Worker("fetchWorker.js");
 
 function display(data,textStatus,jqXHR){
+	data = JSON.parse(data);
 	console.log(data);
+	if(lto === undefined){
+		$("#textbox")[0].innerHTML="";
+	}
+	
+	for(item of data){
+		$("#textbox")[0].innerHTML +="<div>"+item.message+"</div>";
+	}
+	
+	lto = new Date();
 }
+
+
 
 function fetch() {
 	
-	date = new Date();
-	data = dateFormat(date,"dd-mmm-yyyy-HH-MM-ss-l");
+	date = lto;
+	data="";
+	if(date != null){
+		try{
+			data = dateFormat(date,"dd-mmm-yyyy-HH-MM-ss-l");
+		}
+		catch(error){
+	
+		}
+	}
+	var urlrequest;
+	if(date!=null){
+		urlrequest = server+"/get?timestamp="+data;
+	}
+	else{
+		urlrequest = server+"/get";
+	}
 	$.ajax({
 		type:"GET",
 		crossDomain:true,
@@ -44,3 +73,4 @@ function fetch() {
 		error:logerror
 	});
 }
+

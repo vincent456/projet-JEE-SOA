@@ -5,6 +5,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -37,9 +38,10 @@ public class RestController {
 	
 	@CrossOrigin(origins="http://localhost:8080")
 	@RequestMapping(method=RequestMethod.GET,value="/get")
-	List<Message> getMessage(@RequestParam(name="timestamp",required=true)String timestamp) throws Exception{
+	List<Message> getMessage(@RequestParam(name="timestamp",required=false)String timestamp) throws Exception{
 		DateFormat df = new SimpleDateFormat("dd-MMM-yyyy-HH-mm-ss-SSS");
 		Date d;
+		if(!timestamp.equals("")) {
 		try {
 			d = df.parse(timestamp);
 			return MessagesRepository.findByTimestamp(d);	
@@ -47,6 +49,11 @@ public class RestController {
 		catch (ParseException e){
 					throw new Exception("ParseException");
 				}
+		}
+		else {
+			d = new Date(0);
+			return MessagesRepository.findByTimestamp(d);
+		}
 	}
 	
 }

@@ -66,8 +66,7 @@ public class RestController {
 		if(!timestamp.equals("")) {
 		try {
 			d = df.parse(timestamp);
-			//TODO fetch messages
-			InstanceInfo instanceInfo = eurekaClient.getNextServerFromEureka("Database-Srvice", false);
+			InstanceInfo instanceInfo = eurekaClient.getNextServerFromEureka("Database-Service", false);
 			String host = instanceInfo.getHostName();
 			int port = instanceInfo.getPort();
 			RestTemplate restTemplate = new RestTemplate();
@@ -82,7 +81,6 @@ public class RestController {
 		}
 		else {
 			d = new Date(0);
-			//TODO fetch messages
 			InstanceInfo instanceInfo = eurekaClient.getNextServerFromEureka("DATABASE-SERVICE", false);
 			String host = instanceInfo.getHostName();
 			int port = instanceInfo.getPort();

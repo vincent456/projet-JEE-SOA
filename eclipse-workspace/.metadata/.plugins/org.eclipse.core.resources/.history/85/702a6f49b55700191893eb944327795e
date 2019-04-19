@@ -1,0 +1,11 @@
+package com.example.REST.service;
+
+import org.springframework.web.bind.annotation.RequestParam;
+
+@org.springframework.web.bind.annotation.RestController
+public class RestController {
+
+	String postMessage(@RequestParam(name="message",required=true) String message) {
+		
+	}
+}

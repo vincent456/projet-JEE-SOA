@@ -1,6 +1,10 @@
 //BranchProjectTracker__/home/vincent456/Desktop/projet\ web\ soa/projet-JEE-SOA/.git_7148112f593a054ae8fb5239334093dc70380c82=<?xml version\="1.0" encoding\="UTF-8"?>\n<projects>\n<project>/DataBase Service</project>\n<project>/REST service</project>\n</projects>
 //BranchProjectTracker__/home/vincent456/Desktop/projet\ web\ soa/projet-JEE-SOA/.git_master=<?xml version\="1.0" encoding\="UTF-8"?>\n<projects>\n<project>/DataBase Service</project>\n<project>/REST service</project>\n</projects>
+<<<<<<< HEAD
 commit_dialog_history_messages=<?xml version\="1.0" encoding\="UTF-8"?>\n<messages>\n<message>added Eureka</message>\n<message>it works, now need to work on the things</message>\n<message>step. The server can recieve timestamped messages</message>\n<message>added local html but it&apos;s not working due to CORS</message>\n</messages>
+=======
+commit_dialog_history_messages=<?xml version\="1.0" encoding\="UTF-8"?>\n<messages>\n<message>added local html but it&apos;s not working due to CORS</message>\n</messages>
+>>>>>>> d986d6e565b96e23da2308a653ed1819895f9951
 eclipse.preferences.version=1
 resourcehistory_graph_split=500,500
 resourcehistory_rev_split=700,300

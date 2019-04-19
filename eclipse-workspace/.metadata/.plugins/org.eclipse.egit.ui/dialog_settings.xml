@@ -21,7 +21,11 @@
 	</section>
 	<section name="org.eclipse.egit.ui.internal.staging.StagingView">
 		<item value="500,500" key="STAGING_SASH_FORM_WEIGHT"/>
+<<<<<<< HEAD
 		<item value="false" key="sortItemState"/>
+=======
+		<item value="true" key="sortItemState"/>
+>>>>>>> d986d6e565b96e23da2308a653ed1819895f9951
 		<item value="500,500" key="HORIZONTAL_SASH_FORM_WEIGHT"/>
 	</section>
 </section>

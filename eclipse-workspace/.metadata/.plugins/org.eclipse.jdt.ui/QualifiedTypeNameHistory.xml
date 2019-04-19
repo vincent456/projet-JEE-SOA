@@ -5,14 +5,24 @@
 <fullyQualifiedTypeName name="javax.persistence.Id"/>
 <fullyQualifiedTypeName name="javax.persistence.GeneratedValue"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
+<<<<<<< HEAD
+=======
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+>>>>>>> d986d6e565b96e23da2308a653ed1819895f9951
 <fullyQualifiedTypeName name="org.apache.logging.log4j.message.MapMessage"/>
 <fullyQualifiedTypeName name="DBItems.Message"/>
 <fullyQualifiedTypeName name="org.springframework.boot.autoconfigure.domain.EntityScan"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
+<<<<<<< HEAD
+=======
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.example.DataBase.Service.MessagesRepository"/>
+>>>>>>> d986d6e565b96e23da2308a653ed1819895f9951
 <fullyQualifiedTypeName name="org.springframework.boot.autoconfigure.integration.IntegrationProperties.Jdbc"/>
 <fullyQualifiedTypeName name="org.springframework.jdbc.core.JdbcTemplate"/>
 <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.Query"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
+<<<<<<< HEAD
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
 <fullyQualifiedTypeName name="java.text.DateFormat"/>
 <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
@@ -31,4 +41,10 @@
 <fullyQualifiedTypeName name="com.netflix.appinfo.InstanceInfo"/>
 <fullyQualifiedTypeName name="java.beans.Beans"/>
 <fullyQualifiedTypeName name="org.springframework.cloud.netflix.eureka.EnableEurekaClient"/>
+=======
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.CrossOrigin"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
+<fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+<fullyQualifiedTypeName name="java.text.DateFormat"/>
+>>>>>>> d986d6e565b96e23da2308a653ed1819895f9951
 </qualifiedTypeNameHistroy>

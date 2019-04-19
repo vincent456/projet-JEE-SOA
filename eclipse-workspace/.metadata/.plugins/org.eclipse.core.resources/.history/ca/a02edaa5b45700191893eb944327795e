@@ -1,0 +1,9 @@
+package com.example.REST.service;
+
+import java.util.Date;
+
+public class Message {
+	int id
+	Date timestamp;
+	String content;
+}

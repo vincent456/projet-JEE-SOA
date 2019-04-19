@@ -1,0 +1,12 @@
+package DBItems;
+
+import java.util.Date;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Message {
+	private int id;
+	private Date timestamp;
+	private String message;
+}
